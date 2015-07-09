@@ -8,3 +8,5 @@ file=06-29-2015_12_20_02_AM_TRM_WW_P4F_CCA_Reactivation_14d_TM_20150629.txt
 #numberline 101
 awk -F '/101/{print $5}' "$file" > bb
 
+#if without End, the script will run every time, otherwise only once
+awk '/120545084047/ {count++;} END {print count "123"}' 06-29-2015_12_20_02_AM_TRM_WW_P4F_CCA_Reactivation_14d_TM_20150629.txt
